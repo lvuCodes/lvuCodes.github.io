@@ -1,80 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>lvuCodes</title>
-  <style>
-    :root {
-      color-scheme: light dark;
-      --bg: #ffffff;
-      --fg: #1a1a1a;
-      --muted: #6b7280;
-      --accent: #2563eb;
-      --card: #f6f7f9;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0d1117;
-        --fg: #e6edf3;
-        --muted: #9198a1;
-        --accent: #58a6ff;
-        --card: #161b22;
-      }
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--fg);
-      line-height: 1.6;
-      display: grid;
-      place-items: center;
-      min-height: 100vh;
-    }
-    main {
-      width: fit-content;
-      max-width: 90%;
-      padding: 2.5rem 3rem;
-      text-align: center;
-    }
-    h1 {
-      font-size: clamp(2rem, 6vw, 3.5rem);
-      margin: 0 0 0.25rem;
-      letter-spacing: -0.02em;
-    }
-    .tagline {
-      color: var(--muted);
-      font-size: 1.1rem;
-      margin: 0 0 2rem;
-    }
-    .links {
-      display: flex;
-      gap: 0.75rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    a.btn {
-      padding: 0.55rem 1.1rem;
-      border-radius: 8px;
-      background: var(--card);
-      color: var(--fg);
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.15s;
-    }
-    a.btn:hover { color: var(--accent); }
-  </style>
-</head>
-<body>
-  <main>
-    <h1>lvuCodes</h1>
-    <p class="tagline">Building things on the web.</p>
-    <nav class="links">
-      <a class="btn" href="https://github.com/lvucodes">GitHub</a>
-      <a class="btn" href="mailto:lehvu95@gmail.com">Email</a>
-    </nav>
-  </main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lvuCodes</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
