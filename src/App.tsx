@@ -11,19 +11,14 @@ const projects = [
   {
     name: 'eBay Σummer',
     href: 'https://github.com/lvuCodes/ebay-summer',
-    blurb: 'A Chrome extension showing the approx. total cost — item + tax + shipping — on every eBay listing.',
+    blurb:
+      'A Chrome extension showing the approx. total cost — item + tax + shipping — on every eBay listing.',
   },
 ]
 
 function App() {
   return (
     <>
-      <div className="brand-stripe">
-        <span className="a"></span>
-        <span className="b"></span>
-        <span className="c"></span>
-      </div>
-
       <header className="nav">
         <a className="brand" href="#top">
           lvuCodes

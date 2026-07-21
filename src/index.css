@@ -1,36 +1,34 @@
 :root {
-  /* Palette matched to the eBay Σummer landing page — one fixed dark surface,
-     purple accent, so the sites read as one family. */
-  --purple: #6b3fa0;
-  --purple-dark: #4a2a73;
-  --purple-light: #b794e6;
-  --accent-bg: rgba(107, 63, 160, 0.22);
-  --accent-border: rgba(107, 63, 160, 0.45);
+  /* One fixed palette, ported from the eBay Σummer landing page — the page owns
+     its own background, so every visitor sees the same calm, light surface
+     regardless of their OS theme. */
+  --purple: #4b2e83;
+  --purple-light: #eee8f4;
 
-  --bg-card: #23252f;
-  --bg-elev: #282a36;
-  --code-bg: rgba(107, 63, 160, 0.1);
-  --text: #eceef5;
-  --text-soft: #b7b9c8;
-  --text-faint: #8a8ca0;
-  --border: #343648;
-  --shadow:
-    0 1px 3px rgba(0, 0, 0, 0.3),
-    0 12px 34px rgba(0, 0, 0, 0.28);
+  --bg-page: #dcdcdc;
+  --bg-card: #efefef;
+  --bg-elev: #f4f4f4;
+  --text: #1c1c1c;
+  --text-soft: #4a4a4a;
+  --text-faint: #6b6b6b;
+  --border: #c6c8d4;
+  --shadow: 0 2px 2px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.05);
 
-  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-sans:
+    'Atkinson Hyperlegible Next', 'B612', 'IBM Plex Sans', 'Lexend', 'Libertinus Sans', 'Noto Sans',
+    'Oxygen', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, sans-serif;
+  --font-serif:
+    'Atkinson Hyperlegible Next', 'B612', 'IBM Plex Serif', 'Libertinus Serif', 'Noto Serif',
+    Georgia, 'Times New Roman', serif;
+  --font-mono:
+    'Atkinson Hyperlegible Mono', 'B612 Mono', 'IBM Plex Mono', 'Libertinus Mono', 'Noto Sans Mono',
+    'Nova Mono', 'Oxygen Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
-  font: 18px/1.55 var(--sans);
-  color-scheme: dark;
+  color-scheme: light;
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-
-  @media (max-width: 1024px) {
-    font-size: 16px;
-  }
 }
 
 * {
@@ -39,19 +37,26 @@
 
 html {
   scroll-behavior: smooth;
+  background: var(--bg-page);
 }
 
 body {
   margin: 0;
+  font-family: var(--font-sans);
   background:
-    radial-gradient(1100px 520px at 50% -10%, #2a2542 0%, rgba(42, 37, 66, 0) 62%),
-    #1a1b23;
+    radial-gradient(
+      1100px 520px at 50% -10%,
+      color-mix(in srgb, var(--purple) 16%, transparent) 0%,
+      transparent 62%
+    ),
+    var(--bg-page);
   background-attachment: fixed;
   color: var(--text);
+  line-height: 1.55;
 }
 
 #root {
-  max-width: 980px;
+  width: min(80%, 1400px);
   margin: 0 auto;
   padding: 0 24px;
   min-height: 100svh;
@@ -59,12 +64,22 @@ body {
   flex-direction: column;
 }
 
-a {
-  color: var(--purple-light);
-  text-decoration: none;
+@media (max-width: 640px) {
+  #root {
+    width: auto;
+  }
 }
+
+a {
+  color: var(--purple);
+  text-decoration: underline;
+  padding: 0 2px;
+  border-radius: 6px;
+}
+
 a:hover {
   text-decoration: underline;
+  background-color: var(--purple-light);
 }
 
 h1,
@@ -83,11 +98,11 @@ h1 {
 h2 {
   font-size: 1.6rem;
   letter-spacing: -0.01em;
-  margin: 0 0 6px;
+  margin: 0 0 12px;
 }
 
 h3 {
-  font-size: 1.08rem;
+  font-size: 1.1rem;
   font-weight: 700;
   margin: 0 0 6px;
 }
@@ -97,10 +112,9 @@ p {
 }
 
 code {
-  font-family: var(--mono);
+  font-family: var(--font-mono);
   font-size: 0.88em;
-  color: var(--purple-light);
-  background: var(--code-bg);
-  padding: 1px 6px;
-  border-radius: 5px;
+  background: color-mix(in srgb, var(--purple) 10%, transparent);
+  padding: 2px 6px;
+  border-radius: 6px;
 }
