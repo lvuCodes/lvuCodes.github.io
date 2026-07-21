@@ -6,13 +6,26 @@ const projects = [
   {
     name: 'Hex Mirror',
     href: '/hex-mirror',
-    blurb: 'An interactive hex-grid mirror toy.',
+    blurb:
+      'Give it a hex color and it computes the contrast mirror set — complementary and contrast-balanced counterparts, as live swatches.',
   },
   {
     name: 'eBay Σummer',
     href: 'https://github.com/lvuCodes/ebay-summer',
     blurb:
       'A Chrome extension showing the approx. total cost — item + tax + shipping — on every eBay listing.',
+  },
+  {
+    name: 'Treasures Dig Optimizer',
+    href: '/treasures-app',
+    blurb:
+      'A Monopoly GO treasures helper that ranks every cell by the odds an undiscovered item covers it, updating live as you dig.',
+  },
+  {
+    name: 'Terminal Themes',
+    href: 'https://github.com/lvuCodes/terminal-themes',
+    blurb:
+      'Nine macOS-Terminal-inspired palettes and an ANSI color ramp, packaged as a drop-in theme module with a switcher.',
   },
 ]
 
@@ -24,8 +37,6 @@ function App() {
           lvuCodes
         </a>
         <nav>
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
           <a href={GITHUB_URL} target="_blank" rel="noreferrer">
             GitHub ↗
           </a>
@@ -34,20 +45,14 @@ function App() {
 
       <main id="top">
         <section id="about" className="about">
-          <h1>Lauren Vu</h1>
-          <p className="tagline">Software engineer building small, sharp things for the web.</p>
+          <h1>Lauren (Ellie) Vu</h1>
+          <p className="tagline">Software engineer with a passion for design and a11y.</p>
           <p className="bio">
             {/* TODO: replace with your own words */}
-            Placeholder bio — write a couple of sentences about who you are, what you like to build,
-            and what you&apos;re currently working on. This is where visitors get to know you before
-            they dig into the projects below.
           </p>
           <div className="cta-row">
             <a className="btn btn-primary" href={GITHUB_URL} target="_blank" rel="noreferrer">
               GitHub ↗
-            </a>
-            <a className="btn btn-ghost" href="#projects">
-              See projects
             </a>
           </div>
         </section>

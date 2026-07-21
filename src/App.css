@@ -13,6 +13,7 @@
     letter-spacing: -0.3px;
     text-decoration: none;
   }
+
   .brand:hover {
     background-color: var(--purple-light);
   }
@@ -21,12 +22,14 @@
     display: flex;
     gap: 24px;
   }
+
   nav a {
     color: var(--text-soft);
     font-size: 0.98rem;
     text-decoration: none;
     transition: background 0.12s ease;
   }
+
   nav a:hover {
     color: var(--purple);
   }
@@ -50,9 +53,9 @@ main {
   .tagline {
     font-size: clamp(1.2rem, 3vw, 1.7rem);
     color: var(--text-soft);
-    max-width: 34ch;
     margin: 0 auto 6px;
   }
+
   .bio {
     color: var(--text-faint);
     font-size: 1rem;
@@ -67,6 +70,7 @@ main {
     flex-wrap: wrap;
     margin: 32px 0;
   }
+
   .btn {
     display: inline-flex;
     align-items: center;
@@ -83,24 +87,29 @@ main {
       box-shadow 0.12s ease,
       background 0.12s ease;
   }
+
   .btn:hover {
     text-decoration: none;
     transform: translateY(-2px);
   }
+
   .btn-primary {
     background: var(--purple);
     color: #fff;
     box-shadow: 0 2px 6px color-mix(in srgb, var(--purple) 28%, transparent);
   }
+
   .btn-primary:hover {
     background: color-mix(in srgb, var(--purple) 82%, #000);
   }
+
   .btn-ghost {
     background: var(--bg-card);
     color: var(--text);
     border-color: var(--border);
     box-shadow: var(--shadow);
   }
+
   .btn-ghost:hover {
     background: var(--bg-elev);
   }
@@ -113,6 +122,7 @@ main {
   h2 {
     text-align: center;
   }
+
   .section-lead {
     text-align: center;
     color: var(--text-faint);
@@ -122,15 +132,33 @@ main {
 
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 16px;
     list-style: none;
     padding: 0;
     margin: 0;
   }
 
+  @media (max-width: 1024px) {
+    .grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 480px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .grid li {
+    display: flex;
+  }
+
   .card {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: 14px;
@@ -141,6 +169,7 @@ main {
       transform 0.12s ease,
       border-color 0.2s ease;
   }
+
   .card:hover {
     background: var(--bg-card);
     text-decoration: none;
@@ -155,6 +184,7 @@ main {
     font-weight: 700;
     margin-bottom: 6px;
   }
+
   .project-blurb {
     display: block;
     color: var(--text-soft);
