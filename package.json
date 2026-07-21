@@ -9,7 +9,9 @@
     "lint": "oxlint",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "verify": "npm run build",
+    "prepare": "git config core.hooksPath .githooks"
   },
   "dependencies": {
     "react": "^19.2.7",
