@@ -58,8 +58,6 @@ function App() {
         </section>
 
         <section id="projects" className="projects">
-          <h2>Projects</h2>
-          <p className="section-lead">Things I&apos;ve built and shipped.</p>
           <ul className="grid">
             {projects.map((p) => {
               const external = p.href.startsWith('http')
