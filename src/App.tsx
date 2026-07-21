@@ -23,7 +23,7 @@ const projects = [
   },
   {
     name: 'Terminal Themes',
-    href: 'https://github.com/lvuCodes/terminal-themes',
+    href: '/terminal-themes',
     blurb:
       'Nine macOS-Terminal-inspired palettes and an ANSI color ramp, packaged as a drop-in theme module with a switcher.',
   },
