@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  line-height: 1.15;
+  color: #000;
+  background-color: #fff;
+  max-width: 8.5in;
+  margin: 0 auto;
+  font-size: 12pt;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 8pt;
+  border-bottom: 1.5pt solid #000;
+  padding-bottom: 6pt;
+}
+
+.name {
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+.info {
+  font-size: 10pt;
+  margin-bottom: 2pt;
+}
+
+.contact {
+  font-family: monospace;
+  font-size: 9pt;
+  margin: auto;
+}
+
+.education {
+  font-size: 9pt;
+  font-style: italic;
+  margin-top: 2pt;
+}
+
+h2 {
+  font-size: 14pt;
+  font-weight: bold;
+  margin-top: 8pt;
+  margin-bottom: 4pt;
+  text-transform: uppercase;
+  border-bottom: 1pt solid #000;
+  padding-bottom: 2pt;
+}
+
+.skills-content {
+  font-size: 10pt;
+  line-height: 1.3;
+  margin-bottom: 4pt;
+}
+
+.skill-category {
+  margin-bottom: 2pt;
+}
+
+.skill-category strong {
+  font-weight: bold;
+}
+
+.experience-item {
+  margin-bottom: 6pt;
+  page-break-inside: avoid;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2pt;
+}
+
+.job-title {
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+.company {
+  font-style: italic;
+  font-size: 12pt;
+}
+
+.dates {
+  font-size: 9pt;
+  white-space: nowrap;
+}
+
+.description {
+  margin-left: 12pt;
+  margin-top: 2pt;
+}
+
+.description li {
+  margin-bottom: 2pt;
+  list-style-type: disc;
+  font-size: 9pt;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 0.5pt solid currentColor;
+}

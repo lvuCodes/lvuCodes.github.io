@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lauren (Ellie) Vu - Interactive Resume</title>
+  <link rel="stylesheet" href="interactive-resume.css">
+</head>
+
+<body class="detail-standard lens-technical lens-product">
+  <div class="controls" role="region" aria-label="Resume controls">
+    <div class="control-group">
+      <span class="control-label">Detail</span>
+      <div class="chip-row" role="radiogroup" aria-label="Detail level">
+        <button type="button" class="chip" data-detail="concise">Concise</button>
+        <button type="button" class="chip" data-detail="standard">Standard</button>
+        <button type="button" class="chip" data-detail="full">Full</button>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <span class="control-label">Emphasis</span>
+      <div class="chip-row">
+        <button type="button" class="chip" data-lens="technical">Technical</button>
+        <button type="button" class="chip" data-lens="product">Product</button>
+        <button type="button" class="chip" data-lens="data">Data</button>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <span class="control-label">Focus</span>
+      <div class="chip-row">
+        <button type="button" class="chip" data-focus="architecture">Architecture</button>
+        <button type="button" class="chip" data-focus="performance">Performance</button>
+        <button type="button" class="chip" data-focus="delivery">Delivery</button>
+        <button type="button" class="chip" data-focus="leadership">Leadership</button>
+        <button type="button" class="chip" data-focus="teaching">Teaching</button>
+        <button type="button" class="chip chip-reset" data-focus-reset>All</button>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <span class="control-label">Skills</span>
+      <div class="chip-row" role="radiogroup" aria-label="Skills layout">
+        <button type="button" class="chip" data-skills="grouped">Grouped</button>
+        <button type="button" class="chip" data-skills="tags">Tags</button>
+      </div>
+    </div>
+
+    <div class="control-group control-group-cats">
+      <span class="control-label">Skill types</span>
+      <div class="chip-row">
+        <button type="button" class="chip cat-language" data-cat="language">Languages</button>
+        <button type="button" class="chip cat-frontend" data-cat="frontend">Frontend</button>
+        <button type="button" class="chip cat-backend" data-cat="backend">Backend</button>
+        <button type="button" class="chip cat-database" data-cat="database">Database</button>
+        <button type="button" class="chip cat-cloud" data-cat="cloud">Cloud</button>
+        <button type="button" class="chip cat-tools" data-cat="tools">Testing &amp; Tools</button>
+        <button type="button" class="chip cat-data" data-cat="data">Data</button>
+        <button type="button" class="chip cat-design" data-cat="design">Design</button>
+        <button type="button" class="chip cat-soft" data-cat="soft">Soft skills</button>
+      </div>
+    </div>
+  </div>
+
+  <main class="sheet">
+    <div class="header">
+      <div class="name">Lauren (Ellie) Vu</div>
+      <div class="info">Houston, TX</div>
+      <div class="contact">lvu0730pro@gmail.com</div>
+      <div class="education">B.S.A. Biochemistry, Minor in Computer Science - University of Texas, Austin</div>
+      <div class="education">M.S. Computer Science (OMSCS) - Georgia Institute of Technology, In Progress (Started Jan
+        2026)</div>
+    </div>
+
+    <h2>Skills</h2>
+
+    <div class="skills-grouped">
+      <div class="skill-category" data-cat="language frontend backend">
+        <strong>Languages &amp; Frameworks:</strong> JavaScript, TypeScript, Go, Python, Java, React, Next.js, Redux,
+        Node.js<span class="data">, R, Jupyter</span>
+      </div>
+      <div class="skill-category" data-cat="cloud database backend">
+        <strong>Infrastructure &amp; Tools:</strong> GCP, Cloud Run, AWS, Azure, Docker, CI/CD, PostgreSQL, MongoDB,
+        Firebase, Redis, Prisma
+      </div>
+      <div class="skill-category" data-cat="tools">
+        <strong>Testing &amp; Quality:</strong> Jest, React Testing Library, Nightwatch, TDD/BDD, SonarQube, ESLint,
+        Storybook, Code Quality Initiatives
+      </div>
+      <div class="skill-category" data-cat="design soft">
+        <strong>Design &amp; Process:</strong> UI/UX Design, Figma, A11Y, Agile, Technical Documentation, Mentoring,
+        Public Speaking
+      </div>
+      <div class="skill-category data" data-cat="data">
+        <strong>Data &amp; Visualization:</strong> Tableau, SQL, Data Analysis, pandas, numpy, Statistical Methods
+      </div>
+    </div>
+
+    <div class="skills-tags">
+      <span class="skill-tag language-skill" data-cat="language">JavaScript</span>
+      <span class="skill-tag language-skill" data-cat="language">TypeScript</span>
+      <span class="skill-tag language-skill" data-cat="language">Python</span>
+      <span class="skill-tag language-skill" data-cat="language">Go</span>
+      <span class="skill-tag language-skill" data-cat="language">Java</span>
+      <span class="skill-tag language-skill" data-cat="language data">R</span>
+      <span class="skill-tag language-skill" data-cat="language">AppScript</span>
+
+      <span class="skill-tag frontend-skill" data-cat="frontend">ReactJS</span>
+      <span class="skill-tag frontend-skill" data-cat="frontend">Next.js</span>
+      <span class="skill-tag frontend-skill" data-cat="frontend">Redux</span>
+      <span class="skill-tag frontend-skill" data-cat="frontend">HTML</span>
+      <span class="skill-tag frontend-skill" data-cat="frontend">CSS</span>
+      <span class="skill-tag frontend-skill" data-cat="frontend">SCSS</span>
+      <span class="skill-tag frontend-skill" data-cat="frontend">Tailwind CSS</span>
+      <span class="skill-tag frontend-skill" data-cat="frontend">Material-UI</span>
+      <span class="skill-tag frontend-skill" data-cat="frontend">Mantine</span>
+      <span class="skill-tag frontend-skill" data-cat="frontend design">Storybook</span>
+
+      <span class="skill-tag backend-skill" data-cat="backend">NodeJS</span>
+      <span class="skill-tag backend-skill" data-cat="backend">RESTful APIs</span>
+      <span class="skill-tag backend-skill" data-cat="backend">API Development</span>
+      <span class="skill-tag backend-skill" data-cat="backend">Microservices</span>
+      <span class="skill-tag backend-skill" data-cat="backend database">Prisma</span>
+      <span class="skill-tag backend-skill" data-cat="backend tools">Postman</span>
+      <span class="skill-tag backend-skill" data-cat="backend database">Redis</span>
+
+      <span class="skill-tag database-skill" data-cat="database data">SQL</span>
+      <span class="skill-tag database-skill" data-cat="database">PostgreSQL</span>
+      <span class="skill-tag database-skill" data-cat="database">MongoDB</span>
+      <span class="skill-tag database-skill" data-cat="database cloud">Firebase</span>
+
+      <span class="skill-tag cloud-skill" data-cat="cloud">GCP</span>
+      <span class="skill-tag cloud-skill" data-cat="cloud">Cloud Run</span>
+      <span class="skill-tag cloud-skill" data-cat="cloud">AWS</span>
+      <span class="skill-tag cloud-skill" data-cat="cloud">Azure</span>
+      <span class="skill-tag cloud-skill" data-cat="cloud">Docker</span>
+      <span class="skill-tag cloud-skill" data-cat="cloud tools">CI/CD</span>
+
+      <span class="skill-tag tools-skill" data-cat="tools">Jest</span>
+      <span class="skill-tag tools-skill" data-cat="tools">React Testing Library</span>
+      <span class="skill-tag tools-skill" data-cat="tools">Nightwatch</span>
+      <span class="skill-tag tools-skill" data-cat="tools">TDD</span>
+      <span class="skill-tag tools-skill" data-cat="tools">BDD</span>
+      <span class="skill-tag tools-skill" data-cat="tools">SonarQube</span>
+      <span class="skill-tag tools-skill" data-cat="tools">ESLint</span>
+      <span class="skill-tag tools-skill" data-cat="tools">Prettier</span>
+      <span class="skill-tag tools-skill" data-cat="tools">Feature Flags</span>
+      <span class="skill-tag tools-skill" data-cat="tools">GitHub</span>
+      <span class="skill-tag tools-skill" data-cat="tools">GitLab</span>
+      <span class="skill-tag tools-skill" data-cat="tools">JIRA</span>
+      <span class="skill-tag tools-skill" data-cat="tools">Linear</span>
+      <span class="skill-tag tools-skill" data-cat="tools">Confluence</span>
+      <span class="skill-tag tools-skill" data-cat="tools">Notion</span>
+
+      <span class="skill-tag data-skill" data-cat="data">Data Visualization</span>
+      <span class="skill-tag data-skill" data-cat="data">Tableau</span>
+      <span class="skill-tag data-skill" data-cat="data">Jupyter</span>
+      <span class="skill-tag data-skill" data-cat="data">pandas</span>
+      <span class="skill-tag data-skill" data-cat="data">numpy</span>
+      <span class="skill-tag data-skill" data-cat="data">Statistical Methods</span>
+
+      <span class="skill-tag design-skill" data-cat="design">UI/UX Design</span>
+      <span class="skill-tag design-skill" data-cat="design">Figma</span>
+      <span class="skill-tag design-skill" data-cat="design">Lucid</span>
+      <span class="skill-tag design-skill" data-cat="design">Miro</span>
+      <span class="skill-tag design-skill" data-cat="design">A11Y</span>
+      <span class="skill-tag design-skill" data-cat="design data">Data Storytelling</span>
+
+      <span class="skill-tag soft-skill" data-cat="soft">Agile</span>
+      <span class="skill-tag soft-skill" data-cat="soft">Technical Documentation</span>
+      <span class="skill-tag soft-skill" data-cat="soft">Mentoring</span>
+      <span class="skill-tag soft-skill" data-cat="soft">Teaching</span>
+      <span class="skill-tag soft-skill" data-cat="soft">Public Speaking</span>
+      <span class="skill-tag soft-skill" data-cat="soft">Developer Relations</span>
+      <span class="skill-tag soft-skill" data-cat="soft">Stakeholder Communication</span>
+      <span class="skill-tag soft-skill" data-cat="soft">Interviewing</span>
+    </div>
+
+    <h2>Projects</h2>
+
+    <div class="experience-item">
+      <div class="job-header">
+        <div>
+          <a href="https://lvucodes.github.io"><span class="job-title">lvucodes.github.io</span></a>
+        </div>
+      </div>
+      <ul class="description">
+        <li data-focus="architecture delivery">
+          <span class="bullet-main"><strong>eBay Σummer</strong> — Chrome extension surfacing <strong>true landed cost
+              (price + tax + shipping)</strong> on eBay so listings can be compared at a glance</span>
+        </li>
+        <li data-focus="architecture">
+          <span class="bullet-main"><strong>Treasures App</strong> — probabilistic solver that ranks each grid cell by
+            the likelihood of covering an undiscovered item and refines its recommendations as results are
+            recorded</span>
+        </li>
+      </ul>
+    </div>
+
+    <h2>Experience</h2>
+
+    <div class="experience-item">
+      <div class="job-header">
+        <div>
+          <span class="job-title">M.S. Computer Science (OMSCS)</span>, <span class="company">Georgia Institute of
+            Technology</span>
+        </div>
+        <div class="dates">01/2026 - Present</div>
+      </div>
+      <ul class="description">
+        <li data-focus="delivery architecture">
+          <span class="bullet-main">Pursuing <strong>M.S. in Computer Science</strong> <span class="technical">while
+              continuing to design, build, and ship personal software projects</span></span>
+        </li>
+        <li data-focus="architecture delivery">
+          <span class="bullet-main"><strong>CS 6300 Software Development Process</strong> <span class="technical">—
+              requirements, UML design, version control, white-box testing and JUnit; built a Java/Android team
+              application and a four-deliverable individual project</span></span>
+        </li>
+        <li data-focus="architecture">
+          <span class="bullet-main"><strong>CS 7280 Network Science</strong> <span class="technical">— graph theory,
+              degree distributions and power laws, small-world and clustering, centrality, community detection,
+              epidemics and network contagion</span><span class="data">; implemented analyses in Python/Jupyter with
+              NetworkX</span></span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="experience-item">
+      <div class="job-header">
+        <div>
+          <span class="job-title">Front End Software Engineer</span>, <span class="company">Synmax</span>
+        </div>
+        <div class="dates">12/2024 - 08/2025</div>
+      </div>
+      <ul class="description">
+        <li data-focus="delivery architecture">
+          <span class="bullet-main">Engineered <strong>Dark Oil Dashboard end-to-end as sole engineer/designer in 1
+              month</strong>, implementing <strong>multi-layer positive/negative filtering</strong> and sorting <span
+              class="product">via stakeholder collaboration</span></span>
+          <span class="bullet-detail">Owned the feature from initial concept through production deployment, including
+            stakeholder communication, requirement gathering, and regular demos. Implemented user-friendly tables with
+            positive and negative filtering options using feature flags and Firebase, eliminating manual database
+            queries for metrics and enabling real-time data analysis and visualization.</span>
+        </li>
+        <li data-focus="architecture performance">
+          <span class="bullet-main">Architected reusable API migration pattern, accelerating migration velocity
+            <strong>9x</strong> <span class="technical">by consolidating 3+ functions per endpoint into single
+              parameterized implementation</span> across <strong>40+ endpoints</strong></span>
+          <span class="bullet-detail">Highly dynamic migration architecture that modernized legacy systems and improved
+            data accuracy. Reduced API migration time from 3 days per ticket to 1 day, personally completing 3 API
+            migrations per day. New endpoints provided more accurate information with more frequent updates.</span>
+        </li>
+        <li data-focus="architecture performance">
+          <span class="bullet-main">Drove cross-team API design <span class="technical">shifting calculations to
+              backend</span>, reducing <strong>frontend development time 50%</strong> <span class="technical">by
+              eliminating client-side data processing across several endpoints</span></span>
+        </li>
+        <li data-focus="architecture performance">
+          <span class="bullet-main">Engineered <strong>reusable Mantine component library</strong> <span
+              class="technical">including upgrade prompts, error messaging, and custom dashboard components</span>,
+            reducing <strong>development time 20%</strong> across all application features</span>
+        </li>
+        <li data-focus="performance">
+          <span class="bullet-main">Optimized <strong>page load times 83% (30-60s to 5-10s)</strong> <span
+              class="technical">by implementing TTL-based caching for map data</span> in existing application</span>
+          <span class="bullet-detail">Developed and maintained React-based applications hosted on GCP via Cloud Run,
+            with focus on user experience optimization and developer quality of life improvements. Caching strategy left
+            no delay on subsequent reloads.</span>
+        </li>
+        <li data-focus="teaching leadership delivery">
+          <span class="bullet-main">Drove <strong>company-wide Agile adoption</strong> <span class="product">through
+              methodology presentation to C-suite and engineering</span>, improving <strong>feature delivery velocity
+              2x</strong></span>
+          <span class="bullet-detail">Created a comprehensive presentation on development methodologies focused on Agile
+            and Scrum ceremonies, presented to C-suite executives and engineering leadership, leading to company-wide
+            adoption of JIRA and improved project management workflows that reduced project delivery delays by
+            35%.</span>
+        </li>
+        <li class="optional" data-focus="architecture">
+          <span class="bullet-main">Built <strong>payment-tier access control system</strong> <span class="technical">with
+              Firebase feature flags enabling dynamic permissions</span> based on customer payment plans</span>
+          <span class="bullet-detail">Designed and developed user management service features, streamlining
+            authorization workflows.</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="experience-item">
+      <div class="job-header">
+        <div>
+          <span class="job-title">Senior Software Engineer</span>, <span class="company">Shell Energy Services</span>
+        </div>
+        <div class="dates">10/2023 - 07/2024</div>
+      </div>
+      <ul class="description">
+        <li data-focus="architecture performance">
+          <span class="bullet-main">Engineered <strong>core UI component library</strong> <span class="technical">distributed
+              via GitHub</span> across <strong>3+ applications</strong>, reducing <strong>ongoing development time
+              25%</strong></span>
+          <span class="bullet-detail">Architected and implemented the library in ReactJS using a microservices
+            architecture, streamlining component access across every consuming application.</span>
+        </li>
+        <li data-focus="performance architecture">
+          <span class="bullet-main">Drove <strong>ReactJS code quality initiative</strong> <span class="technical">using
+              SonarQube</span>, improving <strong>code smell and reliability ratings 30%</strong> and reducing
+            <strong>production defects 10%</strong></span>
+          <span class="bullet-detail">Resolved 10% of outstanding ReactJS issues, improving system performance and code
+            legibility while significantly reducing technical debt.</span>
+        </li>
+        <li data-focus="leadership teaching">
+          <span class="bullet-main">Mentored junior developers to <strong>feature lead capability</strong>, driving
+            <strong>20% team velocity increase</strong> and enabling <strong>promotion to mid-level</strong></span>
+          <span class="bullet-detail">Mentored two junior developers, fostering a culture of continuous learning and
+            knowledge sharing. One mentee progressed from junior to mid-level during the mentorship period and became
+            feature lead, reducing senior engineer bottlenecks.</span>
+        </li>
+        <li data-focus="teaching performance">
+          <span class="bullet-main">Authored comprehensive onboarding documentation reducing <strong>ramp-up time
+              75%</strong> <span class="product">by simplifying processes for new employees</span></span>
+          <span class="bullet-detail">Crafted user-friendly documentation for onboarding processes and critical
+            development applications, enabling new hires to complete onboarding almost independently and decreasing
+            ramp-up time from 1 month to 1-2 weeks. Documentation improvements also increased deployment frequency from
+            weekly to daily releases.</span>
+        </li>
+        <li data-focus="teaching">
+          <span class="bullet-main">Authored <strong>git branching workflow documentation</strong> <span
+              class="technical">with visual diagrams</span>, enabling junior developers to resolve merge conflicts
+            independently and reducing <strong>senior engineer interruptions 90%</strong></span>
+          <span class="bullet-detail">Simplified git branching strategies through comprehensive documentation,
+            clarifying complicated procedures and accelerating code review by eliminating git branching errors.</span>
+        </li>
+        <li class="extra" data-focus="architecture">
+          <span class="bullet-main">Engineered and deployed <strong>high-performance, scalable back-end APIs</strong>
+            <span class="technical">across multiple microservices using Golang</span>, orchestrating communication in a
+            distributed system architecture</span>
+        </li>
+        <li class="extra" data-focus="leadership delivery">
+          <span class="bullet-main">Served as primary minute taker and time manager for <span class="product">all team
+              meetings and Scrum/Agile ceremonies</span>, improving <strong>action item completion rate from 30% to
+              65%</strong></span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="experience-item">
+      <div class="job-header">
+        <div>
+          <span class="job-title">Senior Software Engineer</span>, <span class="company">Prizeout</span>
+        </div>
+        <div class="dates">11/2022 - 05/2023</div>
+      </div>
+      <ul class="description">
+        <li data-focus="architecture delivery performance">
+          <span class="bullet-main">Engineered <strong>search and filtering feature for multi-environment
+              emulator</strong> <span class="technical">using TDD/BDD and localStorage for state persistence</span>,
+            accelerating <strong>development time 30%</strong> through <strong>company-wide adoption</strong></span>
+          <span class="bullet-detail">Pioneered the feature for an emulator application supporting hundreds of
+            environments. Achieved full adoption by engineering, PM, and QA teams, with cached search results enabling
+            efficient testing workflows.</span>
+        </li>
+        <li data-focus="architecture performance">
+          <span class="bullet-main">Drove refactoring initiative reducing <strong>technical debt 30%</strong> <span
+              class="technical">through DRY principles and reusable responsive components</span>, improving
+            <strong>development time 20%</strong></span>
+          <span class="bullet-detail">Implemented design patterns and instituted multiple reusable components,
+            improving code maintainability and reducing time spent on styling tasks by approximately 50%.</span>
+        </li>
+        <li data-focus="architecture delivery">
+          <span class="bullet-main">Engineered <strong>Collapsible Checkout flow</strong> <span class="technical">with
+              responsive design and a11y compliance</span>, <span class="product">enabling <strong>first credit union
+                partnership</strong> and</span> improving <strong>mobile UX 30%</strong></span>
+          <span class="bullet-detail">Architected a novel checkout flow tailored to credit unions using responsive
+            design principles, securing the first credit union client partnership.</span>
+        </li>
+        <li data-focus="delivery">
+          <span class="bullet-main">Engineered <strong>Big Brand View feature</strong> <span class="technical">with
+              responsive design and a11y compliance</span> to highlight promotions, increasing <strong>user engagement
+              25%</strong></span>
+          <span class="bullet-detail">Leveraged RESTful API design principles to surface high-value deals, specials,
+            and promotions.</span>
+        </li>
+        <li class="extra" data-focus="architecture">
+          <span class="bullet-main">Utilized <strong>Docker</strong> for <span class="technical">containerization</span>,
+            ensuring consistent development and deployment environments across the team</span>
+        </li>
+        <li class="extra" data-focus="teaching leadership">
+          <span class="bullet-main">Initiated rotating <strong>knowledge-sharing initiative</strong> <span
+              class="product">with engineering team of 5, presenting on new technologies, advanced CS concepts,
+              algorithms, and software development best practices</span></span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="experience-item">
+      <div class="job-header">
+        <div>
+          <span class="job-title">Software Engineer II</span>, <span class="company">Sezzle</span>
+        </div>
+        <div class="dates">08/2021 - 09/2022</div>
+      </div>
+      <ul class="description">
+        <li data-focus="architecture performance leadership">
+          <span class="bullet-main">Spearheaded <strong>React 0.12 to 16 upgrade addressing 5 years of technical
+              debt</strong> with rotating team of 5 engineers, reducing <strong>security vulnerabilities 90%</strong>
+            <span class="technical">and resolving breaking changes</span></span>
+          <span class="bullet-detail">Executed the complete frontend framework upgrade over 6 months, reducing security
+            vulnerabilities from 300 to 30 and enabling modern React features including hooks, significantly improving
+            code maintainability and development efficiency across the organization.</span>
+        </li>
+        <li data-focus="leadership delivery">
+          <span class="bullet-main">Orchestrated team operations as <strong>interim engineering manager for 3
+              months</strong>, <span class="product">establishing 2-week sprint structure and Agile ceremonies
+              and</span> accelerating <strong>development 30%</strong></span>
+          <span class="bullet-detail">Established sprint structure and Agile ceremonies for a team of 5 engineers
+            operating without management, enabling predictable feature delivery. Transitioned processes to the incoming
+            manager, who adopted the structure as-is as the team grew to 8 people. Initiated weekly remote team-building
+            activities that improved cohesion and collaboration.</span>
+        </li>
+        <li data-focus="teaching architecture">
+          <span class="bullet-main">Authored <strong>Engineering Best Practices guidelines</strong> <span
+              class="technical">covering code quality, testing patterns, and component architecture</span> for
+            <strong>standardization across ~200 developers</strong></span>
+        </li>
+        <li data-focus="leadership teaching">
+          <span class="bullet-main">Mentored backend developers in React/TypeScript to <strong>full-stack
+              capability</strong> enabling independent frontend work, improving <strong>team velocity 30%</strong></span>
+          <span class="bullet-detail">Established and maintained subject matter expertise in React.js and TypeScript,
+            mentoring 2 junior back-end developers and sharing knowledge with 3+ developers on the team.</span>
+        </li>
+        <li class="extra" data-focus="architecture delivery">
+          <span class="bullet-main">Engineered and deployed <strong>full-stack features</strong> <span
+              class="technical">using React.js and Golang on GCP infrastructure</span> for the <strong>Merchant
+              Dashboard</strong>, improving merchant onboarding efficiency and reducing support tickets</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="experience-item">
+      <div class="job-header">
+        <div>
+          <span class="job-title">Software Engineer</span>, <span class="company">PROS</span>
+        </div>
+        <div class="dates">06/2017 - 08/2021</div>
+      </div>
+      <ul class="description">
+        <li data-focus="delivery architecture performance">
+          <span class="bullet-main">Engineered <strong>Internal Configuration page from POC to core feature</strong>,
+            reducing <strong>support ticket resolution 95% (days to under 1 hour)</strong> <span class="technical">and
+              eliminating tenant UUID risk</span></span>
+          <span class="bullet-detail">Took the feature from proof of concept to production in 3 months, enabling
+            customers to implement configuration changes independently without developer database access. Decreased
+            support workload by 30% and eliminated manual database errors.</span>
+        </li>
+        <li data-focus="performance architecture">
+          <span class="bullet-main">Implemented <strong>test coverage initiative increasing coverage from 30% to
+              70%</strong> <span class="technical">using Jest and Nightwatch with BDD practices</span>, reducing
+            <strong>post-release issues 40%</strong></span>
+          <span class="bullet-detail">Ran the initiative over 1.5 months, improving application stability and
+            establishing comprehensive logging and monitoring protocols that facilitated efficient bug resolution and
+            system performance optimization.</span>
+        </li>
+        <li data-focus="architecture performance">
+          <span class="bullet-main">Engineered and maintained <strong>5+ critical components for internal UI
+              library</strong> used across all development teams, increasing <strong>development speed 25%</strong></span>
+        </li>
+        <li data-focus="architecture">
+          <span class="bullet-main">Engineered <strong>multiple features for Guidance application</strong> <span
+              class="technical">using ReactJS and Redux</span>, optimizing <strong>pricing algorithms and
+              workflows</strong></span>
+          <span class="bullet-detail">Included <span class="data">data visualization tools for product pricing
+              metrics</span>, optimizing customer workflows.</span>
+        </li>
+        <li data-focus="leadership teaching">
+          <span class="bullet-main">Conducted <strong>technical interviews and mentored interns</strong>, improving
+            onboarding efficiency and technical capability with <strong>multiple advancing to full-time
+              positions</strong></span>
+        </li>
+        <li data-focus="leadership">
+          <span class="bullet-main">Managed <strong>team of 5 on Activities Committee</strong> <span class="product">to
+              coordinate game day events for <strong>100+ employees</strong></span></span>
+          <span class="bullet-detail">Led the committee as Head for 6 months, coordinating full-day game events and
+            managing a team of five to create and run unique mini-games, while collaborating with other committees to
+            ensure event quality and timing.</span>
+        </li>
+        <li class="optional" data-focus="teaching leadership">
+          <span class="bullet-main">Organized <strong>monthly UI Circle meetings for 50 engineers</strong> <span
+              class="product">fostering knowledge sharing on front-end technologies</span></span>
+          <span class="bullet-detail">Took over leadership and coordination of the series, organizing speakers and
+            topics including new technologies and code quality standards to enhance cross-team collaboration.
+            Personally led 3 sessions.</span>
+        </li>
+        <li class="extra" data-focus="leadership">
+          <span class="bullet-main">Spearheaded quarterly <strong>team building events</strong> <span class="product">and
+              meals for a team of ~20 employees throughout a 4-year tenure</span></span>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <script src="interactive-resume.js"></script>
+</body>
+
+</html>

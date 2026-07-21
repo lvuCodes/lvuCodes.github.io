@@ -1,0 +1,356 @@
+:root {
+  --font-sans: 'Atkinson Hyperlegible Next', 'Atkinson Hyperlegible', 'B612', 'IBM Plex Sans', 'Lexend', 'Libertinus Sans', 'Noto Sans', 'Oxygen', system-ui, sans-serif;
+  --font-serif: 'Atkinson Hyperlegible Next', 'IBM Plex Serif', 'Libertinus Serif', 'Noto Serif', Georgia, serif;
+  --font-mono: 'Atkinson Hyperlegible Mono', 'B612 Mono', 'IBM Plex Mono', 'Noto Sans Mono', 'Nova Mono', 'Oxygen Mono', monospace;
+
+  --ink: #1a1a1a;
+  --ink-muted: color-mix(in srgb, var(--ink) 60%, #fff);
+  --rule: #1a1a1a;
+  --page: #fff;
+  --shell: #f4f4f5;
+  --accent: #2c3e50;
+  --accent-soft: color-mix(in srgb, var(--accent) 12%, #fff);
+
+  --cat-language: #6b6b6b;
+  --cat-frontend: #64748b;
+  --cat-backend: #6b7280;
+  --cat-database: #65a365;
+  --cat-cloud: #a16207;
+  --cat-tools: #be185d;
+  --cat-data: #84a584;
+  --cat-design: #5f8a8b;
+  --cat-soft: #7c6a9c;
+
+  --gap-xs: 0.25rem;
+  --gap-sm: 0.5rem;
+  --gap-md: 0.75rem;
+  --gap-lg: 1rem;
+  --gap-xl: 1.5rem;
+  --radius: 0.75rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-serif);
+  line-height: 1.15;
+  color: var(--ink);
+  background-color: var(--shell);
+  font-size: 12pt;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-xl);
+  font-family: var(--font-sans);
+  background-color: var(--page);
+  border-bottom: 1px solid color-mix(in srgb, var(--ink) 15%, #fff);
+  padding: var(--gap-md) var(--gap-lg);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+}
+
+.control-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-muted);
+}
+
+.chip-row {
+  display: flex;
+  gap: var(--gap-xs);
+}
+
+.chip {
+  font-family: inherit;
+  font-size: 0.8125rem;
+  color: var(--ink);
+  background-color: var(--page);
+  border: 1px solid color-mix(in srgb, var(--ink) 25%, #fff);
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+}
+
+.chip:hover {
+  border-color: var(--accent);
+}
+
+.chip[aria-pressed='true'] {
+  color: var(--page);
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.sheet {
+  background-color: var(--page);
+  max-width: 8.5in;
+  margin: var(--gap-xl) auto;
+  padding: var(--gap-xl);
+  border-radius: var(--radius);
+}
+
+.header {
+  text-align: center;
+  border-bottom: 1.5pt solid var(--rule);
+  margin-bottom: 8pt;
+  padding-bottom: 6pt;
+}
+
+.name {
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+.info {
+  font-size: 10pt;
+  margin-bottom: 2pt;
+}
+
+.contact {
+  font-family: var(--font-mono);
+  font-size: 9pt;
+}
+
+.education {
+  font-size: 9pt;
+  font-style: italic;
+  margin-top: 2pt;
+}
+
+h2 {
+  font-size: 14pt;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 1pt solid var(--rule);
+  margin-top: 8pt;
+  margin-bottom: 4pt;
+  padding-bottom: 2pt;
+}
+
+.skills-grouped {
+  font-size: 10pt;
+  line-height: 1.3;
+  margin-bottom: 4pt;
+}
+
+.skill-category {
+  margin-bottom: 2pt;
+}
+
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-xs);
+  margin-bottom: 4pt;
+}
+
+.skill-tag {
+  font-family: var(--font-sans);
+  font-size: 9pt;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  padding: 0.125rem 0.5rem;
+  white-space: nowrap;
+}
+
+.skill-tag,
+.chip[data-cat] {
+  border-color: var(--cat);
+  background-color: color-mix(in srgb, var(--cat) 10%, #fff);
+  color: color-mix(in srgb, var(--cat) 75%, #000);
+}
+
+.language-skill,
+.cat-language {
+  --cat: var(--cat-language);
+}
+
+.frontend-skill,
+.cat-frontend {
+  --cat: var(--cat-frontend);
+}
+
+.backend-skill,
+.cat-backend {
+  --cat: var(--cat-backend);
+}
+
+.database-skill,
+.cat-database {
+  --cat: var(--cat-database);
+}
+
+.cloud-skill,
+.cat-cloud {
+  --cat: var(--cat-cloud);
+}
+
+.tools-skill,
+.cat-tools {
+  --cat: var(--cat-tools);
+}
+
+.data-skill,
+.cat-data {
+  --cat: var(--cat-data);
+}
+
+.design-skill,
+.cat-design {
+  --cat: var(--cat-design);
+}
+
+.soft-skill,
+.cat-soft {
+  --cat: var(--cat-soft);
+}
+
+.chip[data-cat][aria-pressed='false'] {
+  background-color: var(--page);
+  border-color: color-mix(in srgb, var(--ink) 20%, #fff);
+  color: var(--ink-muted);
+}
+
+.control-group-cats {
+  align-items: flex-start;
+}
+
+.control-group-cats .chip-row {
+  flex-wrap: wrap;
+  max-width: 32rem;
+}
+
+.chip-reset {
+  font-style: italic;
+}
+
+.experience-item {
+  margin-bottom: 6pt;
+  page-break-inside: avoid;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2pt;
+}
+
+.job-title {
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+.company {
+  font-style: italic;
+  font-size: 12pt;
+}
+
+.dates {
+  font-size: 9pt;
+  white-space: nowrap;
+}
+
+.description {
+  margin-left: 12pt;
+  margin-top: 2pt;
+}
+
+.description li {
+  list-style-type: disc;
+  font-size: 9pt;
+  line-height: 1.2;
+  margin-bottom: 2pt;
+}
+
+.bullet-detail {
+  display: none;
+  color: var(--ink-muted);
+  border-left: 2px solid var(--accent-soft);
+  margin-top: var(--gap-xs);
+  margin-left: var(--gap-xs);
+  padding-left: var(--gap-sm);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 0.5pt solid currentColor;
+}
+
+.skills-tags,
+.optional,
+.extra,
+.technical,
+.product,
+.data {
+  display: none;
+}
+
+body.skills-tags .skills-tags {
+  display: flex;
+}
+
+body.skills-tags .skills-grouped {
+  display: none;
+}
+
+body.lens-technical .technical,
+body.lens-product .product,
+body.lens-data .data {
+  display: inline;
+}
+
+body.lens-data .skills-grouped .data {
+  display: block;
+}
+
+body.detail-standard .optional,
+body.detail-full .optional,
+body.detail-full .extra {
+  display: list-item;
+}
+
+body.detail-full .bullet-detail {
+  display: block;
+}
+
+.is-filtered {
+  display: none !important;
+}
+
+@media print {
+  @page {
+    margin: 0.5in;
+    size: letter;
+  }
+
+  body {
+    background-color: var(--page);
+  }
+
+  .controls {
+    display: none;
+  }
+
+  .sheet {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+  }
+}
