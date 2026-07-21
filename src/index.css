@@ -44,11 +44,9 @@ body {
   margin: 0;
   font-family: var(--font-sans);
   background:
-    radial-gradient(
-      1100px 520px at 50% -10%,
+    radial-gradient(1100px 520px at 50% -10%,
       color-mix(in srgb, var(--purple) 16%, transparent) 0%,
-      transparent 62%
-    ),
+      transparent 62%),
     var(--bg-page);
   background-attachment: fixed;
   color: var(--text);
@@ -57,8 +55,7 @@ body {
 
 #root {
   width: min(80%, 1400px);
-  margin: 0 auto;
-  padding: 0 24px;
+  margin: 0 16px;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
