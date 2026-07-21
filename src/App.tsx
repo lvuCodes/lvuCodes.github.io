@@ -11,7 +11,7 @@ const projects = [
   },
   {
     name: 'eBay Σummer',
-    href: 'https://github.com/lvuCodes/ebay-summer',
+    href: '/ebay-summer',
     blurb:
       'A Chrome extension showing the approx. total cost — item + tax + shipping — on every eBay listing.',
   },
