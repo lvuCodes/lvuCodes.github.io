@@ -1,17 +1,12 @@
 :root {
-  /* One fixed palette, ported from the eBay Σummer landing page — the page owns
-     its own background, so every visitor sees the same calm, light surface
-     regardless of their OS theme. */
+  /* Purple brand identity — pinned site-local tokens, independent of the theme
+     accent. Surfaces, text, and border track the active @lvucodes/ui theme. */
   --purple: #4b2e83;
   --purple-light: #eee8f4;
 
-  --bg-page: #dcdcdc;
-  --bg-card: #efefef;
-  --bg-elev: #f4f4f4;
-  --text: #1c1c1c;
-  --text-soft: #4a4a4a;
-  --text-faint: #6b6b6b;
-  --border: #c6c8d4;
+  /* Faint text derived from the theme's body text so it tracks the palette. */
+  --text-faint: color-mix(in srgb, var(--text) 60%, var(--bg));
+
   --shadow: 0 2px 2px rgba(0, 0, 0, 0.04), 0 4px 12px rgba(0, 0, 0, 0.05);
 
   --font-sans:
@@ -24,8 +19,7 @@
     'Atkinson Hyperlegible Mono', 'B612 Mono', 'IBM Plex Mono', 'Libertinus Mono', 'Noto Sans Mono',
     'Nova Mono', 'Oxygen Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
-  color-scheme: light;
-  color: var(--text);
+  color: var(--text-h);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -37,7 +31,7 @@
 
 html {
   scroll-behavior: smooth;
-  background: var(--bg-page);
+  background: var(--bg);
 }
 
 body {
@@ -47,9 +41,9 @@ body {
     radial-gradient(1100px 520px at 50% -10%,
       color-mix(in srgb, var(--purple) 16%, transparent) 0%,
       transparent 62%),
-    var(--bg-page);
+    var(--bg);
   background-attachment: fixed;
-  color: var(--text);
+  color: var(--text-h);
   line-height: 1.55;
 }
 
@@ -83,7 +77,7 @@ a:hover {
 h1,
 h2,
 h3 {
-  color: var(--text);
+  color: var(--text-h);
   font-weight: 800;
 }
 
