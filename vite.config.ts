@@ -4,7 +4,7 @@ import react from "@vitejs/plugin-react";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  server: { watch: { ignored: ["**/coverage/**", "**/dist/**"] } },
+  server: { port: 5818, watch: { ignored: ["**/coverage/**", "**/dist/**"] } },
   test: {
     // Site tests only — e2e/ belongs to Playwright.
     include: ["src/**/*.test.{ts,tsx}"],
