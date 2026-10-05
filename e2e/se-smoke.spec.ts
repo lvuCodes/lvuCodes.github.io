@@ -6,10 +6,10 @@ defineSeSmoke({ expectBackLink: false });
 test.describe("home page project cards", () => {
   test.use({ viewport: SE_VIEWPORT });
 
-  test("the four project cards are visible and within the viewport width", async ({ page }) => {
+  test("the five project cards are visible and within the viewport width", async ({ page }) => {
     await page.goto("/");
     const cards = page.locator(".card");
-    await expect(cards).toHaveCount(4);
+    await expect(cards).toHaveCount(5);
     const count = await cards.count();
     for (let i = 0; i < count; i++) {
       const card = cards.nth(i);
