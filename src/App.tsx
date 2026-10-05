@@ -28,6 +28,12 @@ const projects = [
     blurb:
       "Nine macOS-Terminal-inspired palettes and an ANSI color ramp, packaged as a drop-in theme module with a switcher.",
   },
+  {
+    name: "Tōng Shū 通书",
+    href: "/tong-shu",
+    blurb:
+      "A Chinese almanac that rates auspicious wedding dates against both partners' birth charts, calculated in your browser.",
+  },
 ];
 
 function App() {
