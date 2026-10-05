@@ -15,6 +15,7 @@ const PROJECTS = [
   { name: "eBay Σummer", href: "/ebay-summer" },
   { name: "Treasures Dig Optimizer", href: "/treasures-app" },
   { name: "Terminal Themes", href: "/terminal-themes" },
+  { name: "Tōng Shū 通书", href: "/tong-shu" },
 ];
 
 describe("App", () => {
@@ -23,10 +24,10 @@ describe("App", () => {
     expect(screen.getByRole("link", { name: "lvuCodes" })).toBeTruthy();
   });
 
-  it("renders the four project cards with the correct hrefs", () => {
+  it("renders the five project cards with the correct hrefs", () => {
     const { container } = render(<App />);
     const cards = [...container.querySelectorAll("a.card")];
-    expect(cards).toHaveLength(4);
+    expect(cards).toHaveLength(5);
     for (const p of PROJECTS) {
       const card = cards.find((c) => c.textContent?.includes(p.name));
       expect(card, p.name).toBeTruthy();
