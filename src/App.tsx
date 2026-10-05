@@ -8,19 +8,18 @@ const projects = [
     name: "Hex Mirror",
     href: "/hex-mirror",
     blurb:
-      "Give it a hex color and it computes the contrast mirror set — complementary and contrast-balanced counterparts, as live swatches.",
+      "Find the complementary and contrast-balanced counterparts of a hex color as live swatches.",
   },
   {
     name: "eBay Σummer",
     href: "/ebay-summer",
     blurb:
-      "A Chrome extension showing the approx. total cost — item + tax + shipping — on every eBay listing.",
+      "A Chrome extension showing the approx. total cost (item + tax + shipping) on every eBay listing.",
   },
   {
     name: "Treasures Dig Optimizer",
     href: "/treasures-app",
-    blurb:
-      "A Monopoly GO treasures helper that ranks every cell by the odds an undiscovered item covers it, updating live as you dig.",
+    blurb: "A Monopoly GO treasures helper that calculates the best cells to dig on a board.",
   },
   {
     name: "Terminal Themes",
@@ -32,7 +31,7 @@ const projects = [
     name: "Tōng Shū 通书",
     href: "/tong-shu",
     blurb:
-      "A Chinese almanac that rates auspicious wedding dates against both partners' birth charts, calculated in your browser.",
+      "A Chinese almanac that reads the traditional calendar to find auspicious dates for important events.",
   },
 ];
 
@@ -57,11 +56,6 @@ function App() {
           <h1>Lauren (Ellie) Vu</h1>
           <p className="tagline">Software engineer with a passion for design and a11y.</p>
           <p className="bio">{/* TODO: replace with your own words */}</p>
-          <div className="cta-row">
-            <a className="btn btn-primary" href={GITHUB_URL} target="_blank" rel="noreferrer">
-              GitHub ↗
-            </a>
-          </div>
         </section>
 
         <section id="projects" className="projects">

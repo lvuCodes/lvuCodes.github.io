@@ -1,8 +1,8 @@
 :root {
-  /* Purple brand identity — pinned site-local tokens, independent of the theme
-     accent. Surfaces, text, and border track the active @lvucodes/ui theme. */
-  --purple: #4b2e83;
-  --purple-light: #eee8f4;
+  /* Brand tokens track the active @lvucodes/ui theme accent, like surfaces,
+     text, and border do. */
+  --purple: var(--accent);
+  --purple-light: color-mix(in srgb, var(--accent) 12%, var(--bg));
 
   /* Faint text derived from the theme's body text so it tracks the palette. */
   --text-faint: color-mix(in srgb, var(--text) 60%, var(--bg));
