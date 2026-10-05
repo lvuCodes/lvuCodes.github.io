@@ -8,7 +8,7 @@ const projects = [
     name: "Hex Mirror",
     href: "/hex-mirror",
     blurb:
-      "Find the complementary and contrast-balanced counterparts of a hex color as live swatches.",
+      "Find the complementary and contrast-balanced counterparts of a hex color as live swatches. Created with CodeSandbox.",
   },
   {
     name: "eBay Σummer",
