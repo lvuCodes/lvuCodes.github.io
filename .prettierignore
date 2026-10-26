@@ -8,5 +8,9 @@ test-results
 # The resume pages live in public/ with their own vocabulary; never touch them.
 public/
 
+# Generated AI-usage disclosure and its ledger.
+AI-USAGE.md
+.ai-attribution
+
 # Stylesheets are hand-formatted and linted by stylelint instead.
 **/*.css
