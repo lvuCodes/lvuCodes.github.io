@@ -8,7 +8,7 @@
 | **By the author** | 0 |
 | **Total since baseline** | 513 |
 
-Baseline commit `36095fc` (2026-10-26). Regenerate with `node scripts/ai-attribution.mjs`.
+Baseline commit `45559a5` (2026-10-06). Regenerate with `node scripts/ai-attribution.mjs`.
 
 ## Changes by Type
 
@@ -17,6 +17,7 @@ Baseline commit `36095fc` (2026-10-26). Regenerate with `node scripts/ai-attribu
 | `chore` | 1 | 355 | 0 |
 | `test` | 1 | 144 | 0 |
 | `ci` | 2 | 14 | 0 |
+| `fix` | 1 | 0 | 0 |
 
 ## Measurement Scope
 
@@ -44,4 +45,4 @@ Baseline commit `36095fc` (2026-10-26). Regenerate with `node scripts/ai-attribu
 - `playwright-report/**`
 - `test-results/**`
 
-_Generated 2026-10-26 16:26:59Z.
+_Generated 2026-10-26 16:40:24Z.
