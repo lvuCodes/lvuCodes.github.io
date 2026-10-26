@@ -40,3 +40,7 @@ Edit loop: change files under `src/` → `git commit` → `git push`. The site r
 
 - This is a GitHub Pages **user site** served at the domain root, so Vite's `base` stays `/` (the default). No base-path configuration is needed.
 - If client-side routing is added later (e.g. React Router), Pages needs a `404.html` fallback (or hash routing) for deep links to resolve on refresh.
+
+## AI Usage
+
+See [AI-USAGE.md](AI-USAGE.md).
