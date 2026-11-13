@@ -2,6 +2,7 @@ import "./App.css";
 import { ThemeSwitcher, useTheme } from "@lvucodes/ui";
 
 const GITHUB_URL = "https://github.com/lvuCodes";
+const REPO_URL = `${GITHUB_URL}/lvuCodes.github.io`;
 
 const projects = [
   {
@@ -86,7 +87,12 @@ function App() {
         <div className="theme-row">
           <ThemeSwitcher theme={theme} onChange={setTheme} />
         </div>
-        <p>© {new Date().getFullYear()} Lauren Vu</p>
+        <p>
+          © {new Date().getFullYear()} Lauren Vu ·{" "}
+          <a href={REPO_URL} target="_blank" rel="noreferrer noopener">
+            lvuCodes.github.io on GitHub
+          </a>
+        </p>
       </footer>
     </>
   );
