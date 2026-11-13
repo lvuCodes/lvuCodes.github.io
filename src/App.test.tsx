@@ -41,6 +41,15 @@ describe("App", () => {
     expect(footer.textContent).toContain(`© ${new Date().getFullYear()}`);
   });
 
+  it("links the site's own repository from the footer, named for the repo", () => {
+    render(<App />);
+    const repo = screen.getByRole("link", { name: "lvuCodes.github.io on GitHub" });
+    expect(repo.getAttribute("href")).toBe("https://github.com/lvuCodes/lvuCodes.github.io");
+    expect(repo.getAttribute("target")).toBe("_blank");
+    expect(repo.getAttribute("rel")).toBe("noreferrer noopener");
+    expect(repo.closest("footer.footer")).toBeTruthy();
+  });
+
   it("renders one theme button per catalog entry", () => {
     render(<App />);
     for (const t of THEMES) {
