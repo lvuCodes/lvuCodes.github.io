@@ -3,8 +3,7 @@ import { afterEach, describe, expect, it } from "vitest";
 import { cleanup, render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import App from "./App";
-import { THEMES, THEME_STORAGE_KEY } from "@lvucodes/ui";
-import { seedDefaultTheme } from "./theme-boot";
+import { THEMES, THEME_STORAGE_KEY, seedDefaultTheme } from "@lvucodes/ui";
 
 // RTL's automatic cleanup only runs under vitest `globals: true`; unmount
 // explicitly so renders don't stack across tests.
@@ -39,6 +38,15 @@ describe("App", () => {
     const { container } = render(<App />);
     const footer = container.querySelector("footer.footer")!;
     expect(footer.textContent).toContain(`© ${new Date().getFullYear()}`);
+  });
+
+  it("links the site's own repository from the footer, named for the repo", () => {
+    render(<App />);
+    const repo = screen.getByRole("link", { name: "lvuCodes.github.io on GitHub" });
+    expect(repo.getAttribute("href")).toBe("https://github.com/lvuCodes/lvuCodes.github.io");
+    expect(repo.getAttribute("target")).toBe("_blank");
+    expect(repo.getAttribute("rel")).toBe("noreferrer noopener");
+    expect(repo.closest("footer.footer")).toBeTruthy();
   });
 
   it("renders one theme button per catalog entry", () => {
